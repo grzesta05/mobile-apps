@@ -11,7 +11,7 @@ class Option{
     var content : String
     var result : Consequence
     
-    init(content: String, result: Consequence = Consequence(0, 0, 0, 0)) {
+    init(_ content: String,_ result: Consequence = Consequence(0, 0, 0, 0)) {
         self.content = content
         self.result = result
     }
