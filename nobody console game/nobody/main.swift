@@ -18,14 +18,23 @@ class Game : ParagraphGameReq{
         while(losingCondition())
         {
             printState()
-            
+            optionsPrompt()
+            getRandomEvent()
+            currentEventID = nextEvents.remove(at: 0)
         }
         
     }
     
+    func optionsPrompt() {
+        var options : [Option] = main_events[currentEventID]!.options
+        for (i, a) in options.enumerated(){
+            print("\(a.content) - press \(i)")
+        }
+    }
     func getRandomEvent() -> Void
     {
-        		
+        let randomNumber = Int.random(in: 0..<main_events.count)
+        nextEvents.append(String(randomNumber))
     }
     
     func losingCondition() -> Bool {
