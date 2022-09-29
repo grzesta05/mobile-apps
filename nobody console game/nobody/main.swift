@@ -33,8 +33,14 @@ class Game : ParagraphGameReq{
         changes[1] = consequence.change_safety
         social_trust += consequence.change_social_trust
         changes[2] = consequence.change_social_trust
-        outbreak_risk += consequence.change_outbreak_risk
-        changes[3] = consequence.change_outbreak_risk
+        if(outbreak_risk + consequence.change_outbreak_risk < 0)
+        {
+            changes[3] = outbreak_risk
+            outbreak_risk = 0.0
+        }else{
+            outbreak_risk += consequence.change_outbreak_risk
+            changes[3] = consequence.change_outbreak_risk
+        }
     }
     
     fileprivate func optionsPrompt() {

@@ -17,6 +17,8 @@ class People{
     fileprivate static let farmer = "Farmer David"
     fileprivate static let assistant = "Assistant Marvin"
     fileprivate static let ministerF = "Minister Sasha"
+    fileprivate static let ministerH = "Minister Philip"
+    fileprivate static let ministerA = "Minister Susan"
 }
 
 
@@ -67,6 +69,48 @@ var main_events = [
         ]
     ),
     "5" : Event(
+        title: "Reinforce the wall",
+        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        options: [
+            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    ),
+    "6" : Event(
+        title: "New restrictions",
+        description: "\(People.ministerH): The risk of getting ill will not decrease... At least not for a very long time. We should set new restrictions to keep people safe. What do you think, sir?",
+        options: [
+            Option("Tough times require tough decisions.", Consequence(-smallDif,0,-mediumDif,-hugeDif)),
+            Option("We are safe here.", Consequence(0,0,0,bigDif))
+        ]
+    ),
+    "7" : Event(
+        title: "Educated society",
+        description: "\(People.ministerA): Educated society is strong society. It's high time we opened school for the youth of the village!",
+        options: [
+            Option("That's right! I'll open a school in every district", Consequence(-bigDif,0,bigDif,-mediumDif)),
+            Option("One school for all districts should be enough", Consequence(-smallDif,smallDif,smallDif,-smallDif)),
+            Option("We have no time nor money to do that!", Consequence(0,0,-mediumDif,smallDif))
+        ]
+    ),
+    "8" : Event(
+        title: "Resources Patrol",
+        description: "\(People.general): Outer world very often hides valuable secrets. What if we sent a patrol out there to gain resources?",
+        options: [
+            Option("Ok, send a few people", Consequence(bigDif,-mediumDif,smallDif,mediumDif)),
+            Option("Yes! Send as many people as you wish", Consequence(hugeDif,-bigDif,-smallDif,bigDif)),
+            Option("Seems like a dumb idea. We're safe here and we've got what we need", Consequence(0, 0, smallDif, 0))
+        ]
+    ),
+    "9" : Event(
+        title: "Reinforce the wall",
+        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        options: [
+            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    ),
+    "10" : Event(
         title: "Reinforce the wall",
         description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
         options: [
