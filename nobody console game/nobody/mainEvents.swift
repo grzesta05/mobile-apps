@@ -103,6 +103,15 @@ var main_events = [
         ]
     ),
     "9" : Event(
+        title: "Fire!",
+        description: "\(People.assistant): There was a fire in District 2, Are we supposed to save the civils or to minimise economical loss?",
+        options: [
+            Option("Save the people!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("Save the resources!", Consequence(0,0,-mediumDif,0))
+            Option("Try to save both", Consequence(-smallDif, -smallDif, -smallDif, 0))
+        ]
+    ),
+    "10" : Event(
         title: "Reinforce the wall",
         description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
         options: [
@@ -118,8 +127,38 @@ var main_events = [
             Option("We have no time for that", Consequence(0,0,-mediumDif,0))
         ]
     ),
-    
-    
+    "10" : Event(
+        title: "Reinforce the wall",
+        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        options: [
+            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    ),
+    "10" : Event(
+        title: "Reinforce the wall",
+        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        options: [
+            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    ),
+    "10" : Event(
+        title: "Reinforce the wall",
+        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        options: [
+            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    ),
+    "10" : Event(
+        title: "Reinforce the wall",
+        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        options: [
+            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    ),
 //    "resourcesFail" : Fail(),
 //    "outbreak_riskFail": Fail(),
 //    "safetyFail" : Fail(),
