@@ -8,12 +8,12 @@
 import Foundation
 
 class Consequence{
-    var change_resources : Decimal
-    var change_safety: Decimal
-    var change_social_trust: Decimal
-    var change_outbreak_risk: Decimal
+    var change_resources : Double
+    var change_safety: Double
+    var change_social_trust: Double
+    var change_outbreak_risk: Double
     
-    init(_ resources: Decimal,_ safety: Decimal, _ social_trust: Decimal, _ outbreak_risk: Decimal) {
+    init(_ resources: Double,_ safety: Double, _ social_trust: Double, _ outbreak_risk: Double) {
         self.change_resources = resources
         self.change_safety = safety
         self.change_social_trust = social_trust

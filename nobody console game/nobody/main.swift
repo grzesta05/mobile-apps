@@ -25,11 +25,21 @@ class Game : ParagraphGameReq{
         
     }
     
+    func applyConsequences(consequence : Consequence)
+    {
+        resources += consequence.change_resources
+        safety += consequence.change_safety
+        social_trust += consequence.change_social_trust
+        outbreak_risk += consequence.change_outbreak_risk
+        
+    }
+    
     func optionsPrompt() {
         var options : [Option] = main_events[currentEventID]!.options
         for (i, a) in options.enumerated(){
             print("\(a.content) - press \(i)")
         }
+        let chosen: Int = Int(readLine()!) ?? 0
     }
     func getRandomEvent() -> Void
     {
