@@ -13,7 +13,7 @@ class Consequence{
     var change_social_trust: Decimal
     var change_outbreak_risk: Decimal
     
-    init(resources: Decimal, safety: Decimal, social_trust: Decimal, outbreak_risk: Decimal) {
+    init(_ resources: Decimal,_ safety: Decimal, _ social_trust: Decimal, _ outbreak_risk: Decimal) {
         self.change_resources = resources
         self.change_safety = safety
         self.change_social_trust = social_trust

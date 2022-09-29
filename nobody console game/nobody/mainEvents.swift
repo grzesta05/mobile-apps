@@ -13,8 +13,8 @@ var main_events = [
         description: "So it begins",
         options : []
     ),
-    "resourcesFail" : Fail(),
-    "outbreak_riskFail": Fail(),
-    "safetyFail" : Fail(),
-    "social_trustFail" : Fail()
+//    "resourcesFail" : Fail(),
+//    "outbreak_riskFail": Fail(),
+//    "safetyFail" : Fail(),
+//    "social_trustFail" : Fail()
 ]
