@@ -7,16 +7,16 @@
 
 import Foundation
 
-let smallDif : Double = 2
-let mediumDif : Double = 5
-let bigDif : Double = 10
-let hugeDif : Double = 20
+private let smallDif : Double = 2
+private let mediumDif : Double = 5
+private let bigDif : Double = 10
+private let hugeDif : Double = 20
 
 class People{
-    static let general = "General Sam"
-    static let farmer = "Farmer David"
-    static let assistant = "Assistant Marvin"
-    static let ministerF = "Minister Sasha"
+    fileprivate static let general = "General Sam"
+    fileprivate static let farmer = "Farmer David"
+    fileprivate static let assistant = "Assistant Marvin"
+    fileprivate static let ministerF = "Minister Sasha"
 }
 
 

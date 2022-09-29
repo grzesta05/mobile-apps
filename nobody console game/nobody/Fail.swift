@@ -14,7 +14,7 @@ enum Factors{
     case OutbreakRisk
 }
 
-let failMessages : [String] = [
+fileprivate let failMessages : [String] = [
     "Your village has lost the resources. Rebellious movements killed you, but soon after the whole village starved to death",
     "Attack of the Infected was inevitable, considering your lack of attention to defence. After the attack your state deteriorates and you are driven to madness",
     "You have failed. People don't trust you anymore. You wake up to warm streams coming out of your throat. You have been murdered in sleep",

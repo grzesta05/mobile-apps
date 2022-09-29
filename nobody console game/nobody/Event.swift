@@ -16,9 +16,4 @@ class Event{
         self.title = title
         self.description = description
     }
-    
-    func selectOption(index : Int)
-    {
-        
-    }
 }

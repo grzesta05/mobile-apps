@@ -1,18 +1,18 @@
-protocol ParagraphGameReq{
+private protocol ParagraphGameReq{
     func printState() -> Void
-    func setEvent() -> Void
     func losingCondition() -> Bool
     func optionsPrompt() -> Void
+    func getRandomEvent() -> Void
 }
 
 class Game : ParagraphGameReq{
-    var resources = 50.0
-    var safety = 50.0
-    var social_trust = 80.0
-    var outbreak_risk = 0.01
-    var currentEventID = "0"
-    var nextEvents : [String] = []
-    var changes : [Double] = [0,0,0,0]
+    private var resources = 50.0
+    private var safety = 50.0
+    private var social_trust = 80.0
+    private var outbreak_risk = 0.01
+    private var currentEventID = "0"
+    private var nextEvents : [String] = []
+    private var changes : [Double] = [0,0,0,0]
     
     init() {
         while(losingCondition())
@@ -25,7 +25,7 @@ class Game : ParagraphGameReq{
         }
     }
     
-    func applyConsequences(consequence : Consequence)
+    private func applyConsequences(consequence : Consequence)
     {
         resources += consequence.change_resources
         changes[0] = consequence.change_resources
@@ -37,7 +37,7 @@ class Game : ParagraphGameReq{
         changes[3] = consequence.change_outbreak_risk
     }
     
-    func optionsPrompt() {
+    fileprivate func optionsPrompt() {
         var options : [Option] = main_events[currentEventID]!.options
         for (i, a) in options.enumerated(){
             print("\(a.content) - press \(i)", terminator: "\n")
@@ -45,13 +45,13 @@ class Game : ParagraphGameReq{
         let chosen: Int = Int(readLine() ?? "0") ?? 0
         applyConsequences(consequence: options[chosen].result)
     }
-    func getRandomEvent() -> Void
+    fileprivate func getRandomEvent() -> Void
     {
         let randomNumber = Int.random(in: 1..<main_events.count)
         nextEvents.append(String(randomNumber))
     }
     
-    func losingCondition() -> Bool {
+    fileprivate func losingCondition() -> Bool {
         var fail: Fail?
         if(resources <= 0){
             fail = Fail(type: Factors.Resources)
@@ -76,8 +76,7 @@ class Game : ParagraphGameReq{
         return true;
     }
     
-    func setEvent() -> Void {}
-    func printState()  -> Void{
+    fileprivate func printState()  -> Void{
         let output : String = String(format: """
     Resources:     %f \(changes[0] > 0 ? "+ " : "- ") \(changes[0])
     Safety:        %f \(changes[1] > 0 ? "+ " : "- ") \(changes[1])
