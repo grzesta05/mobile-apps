@@ -22,10 +22,7 @@ class Game : ParagraphGameReq{
             getRandomEvent()
             currentEventID = nextEvents.remove(at: 0)
             print("", terminator: Array(repeating: "\n", count: 100).joined())
-            
         }
-        print("Would you like to play again?", terminator: "\n")
-        
     }
     
     func applyConsequences(consequence : Consequence)
@@ -45,7 +42,7 @@ class Game : ParagraphGameReq{
         for (i, a) in options.enumerated(){
             print("\(a.content) - press \(i)", terminator: "\n")
         }
-        let chosen: Int = Int(readLine()!) ?? 0
+        let chosen: Int = Int(readLine() ?? "0") ?? 0
         applyConsequences(consequence: options[chosen].result)
     }
     func getRandomEvent() -> Void
@@ -95,4 +92,11 @@ class Game : ParagraphGameReq{
         print(output)
     }
 }
-var a = Game()
+
+var playAgain = 0
+repeat{
+    var a = Game()
+    print("Would you like to play again? yes - 1, no - 0")
+    playAgain = Int(readLine() ?? "0") ?? 0
+} while playAgain != 0
+
