@@ -112,53 +112,61 @@ var main_events = [
         ]
     ),
     "10" : Event(
-        title: "Reinforce the wall",
-        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+        title: "Workers Protest",
+        description: "\(People.ministerF): People are protesting. Working environment isn't appropriate",
         options: [
-            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
-            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+            Option("I will look into it", Consequence(-smallDif,0,smallDif,0)),
+            Option("Didn't ask", Consequence(0,smallDif,-mediumDif,0))
         ]
     ),
-    "10" : Event(
-        title: "Reinforce the wall",
-        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+    "11" : Event(
+        title: "Criminal caught",
+        description: "\(People.general): Last night we have found the criminal responsible for serious of murders in the Village. I think we should sentence him to death to set an example",
         options: [
-            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
-            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+            Option("He will hang.", Consequence(0,mediumDif,smallDif,0)),
+            Option("We aren't barbarians, lock him up in a cell", Consequence(-smallDif,0,0,0))
         ]
     ),
-    "10" : Event(
-        title: "Reinforce the wall",
-        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+    "12" : Event(
+        title: "Weapon research",
+        description: "\(People.general): Researching new combat methods would significantly improve safety of the town",
         options: [
-            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
-            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+            Option("I'll grant the resources", Consequence(-bigDif,hugeDif,smallDif,0)),
+            Option("We don't need that", Consequence(0,0,-smallDif,0))
         ]
     ),
-    "10" : Event(
-        title: "Reinforce the wall",
-        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+    "13" : Event(
+        title: "Plants research",
+        description: "\(People.farmer): I have an idea how to more effectively p-plant seeds. It's a bit expensive tho...",
         options: [
-            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
-            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+            Option("You will get the resources.", Consequence(-smallDif,0,mediumDif,0)),
+            Option("We don't have money for that", Consequence(0,0,-mediumDif,0))
         ]
     ),
-    "10" : Event(
-        title: "Reinforce the wall",
-        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+    "14" : Event(
+        title: "Medical research",
+        description: "\(People.ministerH): In order to conduct my Virus treatment research, I need financial support. The research may be a step further on the path of finding the cure",
         options: [
-            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
-            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+            Option("Sure, do your work!", Consequence(-mediumDif,0,mediumDif,-bigDif)),
+            Option("We have no money for that", Consequence(0,0,-mediumDif,-smallDif))
         ]
     ),
-    "10" : Event(
-        title: "Reinforce the wall",
-        description: "\(People.general): I think we should reinforce the wall that protects us from the outer, infected world. Safety first, ya know what they say",
+    "15" : Event(
+        title: "Pile of corpses",
+        description: "\(People.ministerH): Corpses are piling up in the Village. It increases the risk of infection. What should we do with the bodies?",
         options: [
-            Option("Sure!", Consequence(-smallDif,0,smallDif,mediumDif)),
-            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+            Option("Burn them", Consequence(0,-smallDif,-mediumDif,-bigDif)),
+            Option("Bury them on a cementary", Consequence(-smallDif,0,mediumDif,-smallDif))
         ]
     ),
+    "16" : Event(
+        title: "Outsiders at gates",
+        description: "\(People.general): There are plenty of people seeking shelter at our gates. They just need a place to sleep, they have their own food. I'm afraid that there is a slight chance that some of them are infected",
+        options: [
+            Option("Let them in!", Consequence(-smallDif,-mediumDif,smallDif,mediumDif)),
+            Option("We have no time for that", Consequence(0,0,-mediumDif,0))
+        ]
+    )
 //    "resourcesFail" : Fail(),
 //    "outbreak_riskFail": Fail(),
 //    "safetyFail" : Fail(),
